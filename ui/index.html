@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AtlasDesk Agent</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div class="brand"><span class="dot"></span><b>AtlasDesk</b><small>v1.2</small></div>
+<div class="badges"><span>4 tools</span><span>MCP</span><span>Skills</span><span>Hooks</span></div></header>
+<main>
+<aside class="files"><div class="panel-title">WORKSPACE</div><div class="tree">▾ workspace/<br><span>　calculator.py</span><br><span>　test_calculator.py</span></div></aside>
+<section class="chat"><div id="messages"><div class="bubble assistant">AtlasDesk 已就绪。先读后改，完成前验证。</div></div>
+<form id="composer"><textarea id="prompt" placeholder="例如：帮我跑一下测试"></textarea><div class="actions"><button type="button" id="stop" disabled>■ 中断</button><button id="send">发送 ↗</button></div></form></section>
+<aside class="trace"><div class="panel-title">TOOL TRACE</div><div id="trace-list"></div></aside>
+</main><script src="/app.js"></script></body></html>

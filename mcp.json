@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "course-demo": {
+      "command": "$SELF",
+      "args": [
+        "--mcp-demo"
+      ]
+    }
+  }
+}

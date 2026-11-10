@@ -1,0 +1,70 @@
+:root{--bg:#0f1216;--panel:#151a20;--panel2:#1b222b;--text:#e8edf2;--muted:#8997a6;--line:#2a333e;--accent:#7dd3fc;--ok:#86efac;--bad:#fda4af}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui;height:100vh;overflow:hidden}
+header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid var(--line);background:#11161b}
+.brand{display:flex;align-items:center;gap:10px}.dot{width:11px;height:11px;border-radius:50%;background:var(--accent)}small{color:var(--muted)}
+.badges{display:flex;gap:8px}.badges span{border:1px solid var(--line);padding:4px 9px;border-radius:999px;font-size:12px}
+main{height:calc(100vh - 58px);display:grid;grid-template-columns:220px 1fr 360px}
+.files,.trace{background:var(--panel);padding:14px}.trace{border-left:1px solid var(--line);overflow:auto}.files{border-right:1px solid var(--line)}
+.panel-title{font-size:11px;letter-spacing:.14em;color:var(--muted);margin-bottom:14px}.tree span{color:#9fb0c0}
+.chat{display:grid;grid-template-rows:1fr auto}.bubble{max-width:760px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);white-space:pre-wrap}
+#messages{overflow:auto;padding:28px 8%;display:flex;flex-direction:column;gap:14px}.user{align-self:flex-end;background:#163344}
+#composer{border-top:1px solid var(--line);padding:14px 8% 18px;background:#11161b}textarea{width:100%;min-height:74px;background:#0d1116;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px}
+.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:9px}button{padding:8px 14px;border-radius:9px;border:1px solid var(--line);background:#1d2730;color:var(--text)}#send{background:#c9f1ff;color:#09202a;font-weight:700;border:0}
+.trace-card{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}.trace-head{display:flex;justify-content:space-between;padding:8px 10px;background:#182029;font-size:12px}.trace-body{padding:8px 10px;color:#aebbc8;font:12px ui-monospace,monospace;white-space:pre-wrap}.ok{color:var(--ok)}.bad{color:var(--bad)}
+
+
+/* AtlasDesk: viewport-safe three-panel layout */
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+header { flex-shrink: 0; }
+main {
+  height: calc(100vh - 58px);
+  height: calc(100dvh - 58px);
+  min-height: 0;
+  min-width: 0;
+  grid-template-columns: 220px minmax(0, 1fr) 360px;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+.files, .trace, .chat {
+  min-height: 0;
+  min-width: 0;
+}
+.files, .trace {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.chat {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+#messages {
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
+.bubble {
+  flex-shrink: 0;
+  overflow-wrap: anywhere;
+}
+#composer {
+  min-height: 0;
+  flex-shrink: 0;
+}
+.trace-body {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1000px) {
+  main { grid-template-columns: 160px minmax(0, 1fr) 250px; }
+}
+@media (max-width: 680px) {
+  main { grid-template-columns: minmax(0, 1fr); }
+  .files, .trace { display: none; }
+}

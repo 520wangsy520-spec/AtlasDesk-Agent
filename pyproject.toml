@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "desktop-agent"
+version = "1.2.0"
+description = "AtlasDesk desktop coding agent for course assignment"
+requires-python = ">=3.11"
+dependencies = [
+  "pywebview==6.2.1"
+]
+
+[project.scripts]
+desktop-agent = "desktop:main"
+
+[tool.setuptools]
+py-modules = ["desktop", "mcp_demo_server"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent*", "server*", "app*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

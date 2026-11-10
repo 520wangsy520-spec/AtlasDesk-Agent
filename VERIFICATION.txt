@@ -1,0 +1,161 @@
+TEST_EXIT=0
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+test_env_block (test_skills_hooks.Tests.test_env_block) ... ok
+test_rm_block (test_skills_hooks.Tests.test_rm_block) ... ok
+test_three_skills (test_skills_hooks.Tests.test_three_skills) ... ok
+test_triggers (test_skills_hooks.Tests.test_triggers) ... ok
+test_bash (test_tools.ToolTests.test_bash) ... ok
+test_edit_multiple (test_tools.ToolTests.test_edit_multiple) ... ok
+test_escape (test_tools.ToolTests.test_escape) ... ok
+test_read (test_tools.ToolTests.test_read) ... ok
+test_write_edit (test_tools.ToolTests.test_write_edit) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 3.455s
+
+OK
+
+SETUP_GLOBAL_EXIT=0
+created: /home/oai/.atlasdesk/AGENTS.md
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+
+SKILL_INSPECT_EXIT=0
+{
+  "skills": [
+    {
+      "name": "fetch-issue",
+      "has_scripts": false,
+      "uses_mcp": true
+    },
+    {
+      "name": "review-diff",
+      "has_scripts": true,
+      "uses_mcp": false
+    },
+    {
+      "name": "run-tests",
+      "has_scripts": false,
+      "uses_mcp": false
+    }
+  ],
+  "catalog_tokens": 62,
+  "full_tokens": 313,
+  "disclosure_ratio": 5.05,
+  "trials": [
+    {
+      "query": "帮我跑一下测试",
+      "expected": "run-tests",
+      "hit": "run-tests",
+      "ok": true
+    },
+    {
+      "query": "为什么挂了",
+      "expected": "run-tests",
+      "hit": "run-tests",
+      "ok": true
+    },
+    {
+      "query": "把这段 diff 审一遍",
+      "expected": "review-diff",
+      "hit": "review-diff",
+      "ok": true
+    },
+    {
+      "query": "看看改了什么",
+      "expected": "review-diff",
+      "hit": "review-diff",
+      "ok": true
+    },
+    {
+      "query": "帮我查 issue 101",
+      "expected": "fetch-issue",
+      "hit": "fetch-issue",
+      "ok": true
+    },
+    {
+      "query": "今天天气怎么样",
+      "expected": null,
+      "hit": null,
+      "ok": true
+    }
+  ],
+  "false_positive": 0
+}
+DEMO_RED_GREEN_EXIT=0
+1) baseline reset
+自动测试：red
+FAIL: test_add (test_calculator.TestCalculator.test_add)
+AssertionError: 6 != 5
+FAILED (failures=1)
+自动测试：green
+OK
+2) restored calculator.py
+Now run: python -m app.inspect custom --out custom_report.json
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+
+CUSTOM_INSPECT_EXIT=0
+{
+  "agents_md": {
+    "found": true,
+    "bytes": 1213,
+    "layers": [
+      "global",
+      "project"
+    ]
+  },
+  "denied": [
+    {
+      "tool": "write",
+      "path": ".env",
+      "reason": "密钥不入库，用环境变量；需要示例时只写 .env.example。"
+    },
+    {
+      "tool": "bash",
+      "command": "rm -rf build/",
+      "reason": "拒绝 rm -rf；替代方案：先用 git clean -nd 预览，再用 git restore 或明确删除单个文件。"
+    }
+  ],
+  "autotest": {
+    "runs": 2,
+    "red": 1,
+    "green": 1,
+    "red_to_green": 1,
+    "injected_lines": 4
+  },
+  "reviewer": {
+    "runs": 0,
+    "issues_found": 0,
+    "main_context_delta": 0,
+    "subagent_tokens": 0
+  }
+}
+WHEEL_EXIT=0
+MCP_LIST={"jsonrpc": "2.0", "id": 1, "result": {"tools": [{"name": "get_issue", "description": "查询课程演示 issue。用户要求查 issue 或任务单时使用。", "inputSchema": {"type": "object", "properties": {"issue_id": {"type": "string", "description": "issue id，如 101"}}, "required": ["issue_id"]}}]}}
+MCP_CALL={"jsonrpc": "2.0", "id": 2, "result": {"content": [{"type": "text", "text": "{\"id\": \"101\", \"title\": \"Fix edit uniqueness check\", \"status\": \"open\", \"body\": \"Ensure edit refuses 0 or multiple matches.\"}"}]}}

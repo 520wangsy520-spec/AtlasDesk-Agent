@@ -1,0 +1,55 @@
+{
+  "agents_md": {
+    "found": true,
+    "bytes": 1213,
+    "layers": [
+      "global",
+      "project"
+    ]
+  },
+  "denied": [
+    {
+      "tool": "write",
+      "path": ".env",
+      "reason": "密钥不入库，用环境变量；需要示例时只写 .env.example。"
+    },
+    {
+      "tool": "bash",
+      "command": "rm -rf build/",
+      "reason": "拒绝 rm -rf；替代方案：先用 git clean -nd 预览，再用 git restore 或明确删除单个文件。"
+    },
+    {
+      "tool": "write",
+      "path": ".env",
+      "reason": "密钥不入库，用环境变量；需要示例时只写 .env.example。"
+    },
+    {
+      "tool": "bash",
+      "command": "rm -rf build/",
+      "reason": "拒绝 rm -rf；替代方案：先用 git clean -nd 预览，再用 git restore 或明确删除单个文件。"
+    },
+    {
+      "tool": "write",
+      "path": ".env",
+      "reason": "密钥不入库，用环境变量；需要示例时只写 .env.example。"
+    },
+    {
+      "tool": "bash",
+      "command": "rm -rf build/",
+      "reason": "拒绝 rm -rf；替代方案：先用 git clean -nd 预览，再用 git restore 或明确删除单个文件。"
+    }
+  ],
+  "autotest": {
+    "runs": 2,
+    "red": 1,
+    "green": 1,
+    "red_to_green": 1,
+    "injected_lines": 4
+  },
+  "reviewer": {
+    "runs": 1,
+    "issues_found": 0,
+    "main_context_delta": 9,
+    "subagent_tokens": 46
+  }
+}
