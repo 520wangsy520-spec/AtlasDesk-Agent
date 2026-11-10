@@ -1,12 +1,32 @@
-.env
-.venv/
+# Python 缓存
 __pycache__/
 *.pyc
 *.pyo
+
+# Python 虚拟环境
+.venv/
+venv/
+
+# 环境变量与敏感文件
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 构建产物
 build/
 dist/
 *.spec
 *.egg-info/
+
+# 系统文件
 .DS_Store
+Thumbs.db
+
+# 临时文件
+*.log
 reports/*.tmp
+
+# Agent 运行记录
 workspace/.agent/
